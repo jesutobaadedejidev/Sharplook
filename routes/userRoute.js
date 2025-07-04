@@ -10,14 +10,23 @@ const userRouter = express.Router();
 /**
  * @swagger
  * /api/users:
- *   get:
- *     summary: Get all users
+ *   post:
+ *     summary: Create users
  *     responses:
  *       200:
  *         description: Success
  */
-
 userRouter.post("/register", registerUser);
+
+/**
+ * @swagger
+ * /api/users:
+ *   post:
+ *     summary: Create users
+ *     responses:
+ *       200:
+ *         description: Success
+ */
 userRouter.post("/login", loginUser);
 userRouter.post("/admin", adminLogin);
 

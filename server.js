@@ -25,11 +25,11 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3000", // Update this after deployment
+        url: "http://localhost:4000", // Update this after deployment
       },
     ],
   },
-  apis: ["./routes/*.js"], // Points to files with Swagger comments
+  apis: ["./routes/userRoute.js"], // Points to files with Swagger comments
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
