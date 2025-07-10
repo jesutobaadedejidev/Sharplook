@@ -2,17 +2,15 @@ import mongoose from "mongoose";
 
 // schema is a construct that helps us add data in the database
 
-const productSchema = new mongoose.Schema({
+const serviceSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  description: { type: String, required: true },
-  price: { type: Number, required: true },
+  price: { type: String, required: true },
   image: { type: Array, required: true },
-  category: { type: Array, required: true },
   date: { type: Number, required: true },
 });
 
 //when the product model is available then that product model would be used and assigned in this product model variable but if not available, a new model would be created using this schema
-const productModel =
-  mongoose.models.product || mongoose.model("product", productSchema);
+const serviceModel =
+  mongoose.models.service || mongoose.model("service", serviceSchema);
 
-export default productModel;
+export default serviceModel;
